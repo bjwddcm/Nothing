@@ -1,5 +1,22 @@
-from typing import *
-a = {1, 23}
+a = set(range(1, 1000))
+b = set(range(2, 700))
+c = []
 
-print(a, type(a))
-print(isinstance(a, Iterable))
+# for i in a:
+#     # print(i,end=",")
+#     for j in b:
+#         if i == j:
+#             # print(i)
+#             c.append(i)
+#             # print(set(c))
+#         else:
+#             pass
+
+# print(c)
+# print(a - set(c))
+
+for i in a:
+    if i not in b:
+        c.append(i)
+        
+print(set(c))
