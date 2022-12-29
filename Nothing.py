@@ -11,3 +11,7 @@ values = [1, 2, 3]
 e = dict(zip(keys, values))
 print(e)
 # **************************************
+
+print(e.keys())
+print(e.values())
+print(e.items())
