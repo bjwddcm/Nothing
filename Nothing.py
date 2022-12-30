@@ -1,22 +1,9 @@
-a = set(range(1, 1000))
-b = set(range(2, 700))
-c = []
+import copy
 
-# for i in a:
-#     # print(i,end=",")
-#     for j in b:
-#         if i == j:
-#             # print(i)
-#             c.append(i)
-#             # print(set(c))
-#         else:
-#             pass
+a = (1,2,3,4)
+b = copy.copy(a)
+c = tuple(a)
 
-# print(c)
-# print(a - set(c))
-
-for i in a:
-    if i not in b:
-        c.append(i)
-        
-print(set(c))
+print(id(a)==id(b))
+print(id(a)==id(c))
+print(type(a))
